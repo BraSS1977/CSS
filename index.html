@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пользователи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card" onmouseover="playAudio('audio1')" onmouseout="stopAudio('audio1')">
+            <audio id="audio1" src="Ivanvoice.mp3"></audio>
+            <div class="card-image" style="background-image: url('Ivan.png');"></div>
+            <div class="card-info">
+                <h2>Иван царевич</h2>
+                <p>Email: ivan@needledestroyer.com</p>
+                <p>Дата рождения: 1 января 1977</p>
+                <p>Город: Москва</p>
+            </div>
+        </div>
+        <div class="card" onmouseover="playAudio('audio2')" onmouseout="stopAudio('audio2')">
+            <audio id="audio2" src="Maryavoice.mp3"></audio>
+            <div class="card-image" style="background-image: url('Marya.jpg');"></div>
+            <div class="card-info">
+                <h2>Марья Искуссница</h2>
+                <p>Email: maria@carpet.com</p>
+                <p>Дата рождения: 1 марта 1979</p>
+                <p>Город: Санкт-Петербург</p>
+            </div>
+        </div>
+        <div class="card" onmouseover="playAudio('audio3')" onmouseout="stopAudio('audio3')">
+            <audio id="audio3" src="Soloveyvoice.mp3"></audio>
+            <div class="card-image" style="background-image: url('Solovey.jpg');"></div>
+            <div class="card-info">
+                <h2>Соловей-разбойник</h2>
+                <p>Email: whistler@oak.com</p>
+                <p>Дата рождения: 20 апреля 1907</p>
+                <p>Город: Чернигов</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function playAudio(audioId) {
+            const audioElement = document.getElementById(audioId);
+            audioElement.currentTime = 0; // Сбросить начало
+            audioElement.play();
+        }
+
+        function stopAudio(audioId) {
+            const audioElement = document.getElementById(audioId);
+            audioElement.pause();
+        }
+    </script>
+</body>
+</html>
